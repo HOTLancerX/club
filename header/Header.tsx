@@ -65,7 +65,7 @@ export default function ClubHeader({
                     ) : (
                         <div className="flex items-center gap-3">
                             {/* Mascot Icon */}
-                            <div className="relative w-11 h-11 rounded-xl bg-gradient-to-br from-amber-500 via-orange-600 to-amber-700 p-0.5 shadow-md group-hover:scale-105 transition-transform shrink-0">
+                            <div className="relative w-11 h-11 rounded-xl bg-linear-to-br from-amber-500 via-orange-600 to-amber-700 p-0.5 shadow-md group-hover:scale-105 transition-transform shrink-0">
                                 <div className="w-full h-full bg-[#07111e] rounded-[10px] flex items-center justify-center overflow-hidden">
                                     <svg
                                         viewBox="0 0 24 24"
@@ -172,7 +172,7 @@ export default function ClubHeader({
                 <div className="flex items-center gap-3 shrink-0">
                     <Link
                         href="/account"
-                        className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500 to-[#f97316] hover:from-amber-400 hover:to-orange-500 text-[#07111e] font-black text-xs uppercase tracking-wider shadow-md hover:shadow-orange-500/20 transition transform hover:-translate-y-0.5 cursor-pointer"
+                        className="hidden sm:inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-linear-to-r from-amber-500 to-[#f97316] hover:from-amber-400 hover:to-orange-500 text-[#07111e] font-black text-xs uppercase tracking-wider shadow-md hover:shadow-orange-500/20 transition transform hover:-translate-y-0.5 cursor-pointer"
                     >
                         <span>Register / Login</span>
                         <Icon icon="solar:user-bold" className="w-4 h-4 text-[#07111e]" />
