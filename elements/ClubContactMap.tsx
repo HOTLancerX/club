@@ -78,75 +78,73 @@ export function ClubContactMapFrontend({ element }: { element: any }) {
   const headingStyles = getTypographyStyles(s.style?.headingTypography || {});
 
   return (
-    <div className="w-full py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-12">
+    <div className="w-full space-y-12">
       {/* Header */}
       <div className="text-center space-y-2 max-w-2xl mx-auto">
         <span className="inline-flex items-center gap-1.5 text-xs font-black uppercase tracking-wider text-orange-600 bg-orange-50 border border-orange-200 px-3 py-1 rounded-full">
           <Icon icon="solar:phone-calling-bold" width={14} />
           {badgeText}
         </span>
-        <h2 className="text-3xl sm:text-4xl font-black text-slate-900 uppercase" style={headingStyles}>
+        <h2 className="text-3xl sm:text-4xl font-black text-gray-900 uppercase" style={headingStyles}>
           {sectionTitle}
         </h2>
-        <p className="text-sm sm:text-base text-slate-500">{sectionSubtitle}</p>
+        <p className="text-sm sm:text-base text-gray-500">{sectionSubtitle}</p>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start mb-8">
         {/* Left Side: Contact Information & Cards */}
         <div className="lg:col-span-5 space-y-6">
           {/* Main Info Card */}
-          <div className="p-8 rounded-3xl bg-slate-900 text-white border border-slate-800 shadow-xl space-y-6 relative overflow-hidden">
-            <div className="absolute top-0 right-0 -mr-10 -mt-10 w-48 h-48 rounded-full bg-orange-500/10 blur-2xl pointer-events-none" />
-
+          <div className="p-2 md:p-4 text-black space-y-6 relative">
             <div className="flex items-center gap-4">
-              <div className="w-12 h-12 rounded-2xl bg-orange-500 text-white flex items-center justify-center font-bold shrink-0 shadow-lg">
+              <div className="w-12 h-12 rounded-2xl bg-main text-white flex items-center justify-center font-bold shrink-0 shadow-lg">
                 <Icon icon="solar:map-point-wave-bold" width={24} />
               </div>
               <div>
-                <span className="text-[10px] font-bold uppercase tracking-widest text-orange-400 block">
+                <span className="text-[10px] font-bold uppercase tracking-widest text-gray-400 block">
                   HOME GROUND & CLUBHOUSE
                 </span>
                 <h3 className="text-lg font-black">{groundName}</h3>
               </div>
             </div>
 
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed">
+            <p className="text-xs sm:text-sm text-gray-500 leading-relaxed">
               {addressLine1}<br />
               {addressLine2}
             </p>
 
-            <div className="pt-4 border-t border-slate-800 space-y-3 text-xs">
+            <div className="pt-4 border-t border-main space-y-3 text-xs">
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-slate-800 text-orange-400 flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-main text-white flex items-center justify-center shrink-0">
                   <Icon icon="solar:phone-bold" width={16} />
                 </div>
                 <div>
-                  <span className="text-[10px] text-slate-400 block">Phone Inquiries</span>
-                  <a href={`tel:${phoneMain}`} className="font-bold text-slate-200 hover:text-orange-400 transition">
+                  <span className="text-[10px] text-gray-400 block">Phone Inquiries</span>
+                  <a href={`tel:${phoneMain}`} className="font-bold text-gray-500 hover:text-white transition">
                     {phoneMain}
                   </a>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-slate-800 text-orange-400 flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-main text-white flex items-center justify-center shrink-0">
                   <Icon icon="solar:letter-bold" width={16} />
                 </div>
                 <div>
-                  <span className="text-[10px] text-slate-400 block">General Administration</span>
-                  <a href={`mailto:${emailGeneral}`} className="font-bold text-slate-200 hover:text-orange-400 transition">
+                  <span className="text-[10px] text-gray-400 block">General Administration</span>
+                  <a href={`mailto:${emailGeneral}`} className="font-bold text-gray-500 hover:text-white transition">
                     {emailGeneral}
                   </a>
                 </div>
               </div>
 
               <div className="flex items-center gap-3">
-                <div className="w-8 h-8 rounded-lg bg-slate-800 text-orange-400 flex items-center justify-center shrink-0">
+                <div className="w-8 h-8 rounded-lg bg-main text-white flex items-center justify-center shrink-0">
                   <Icon icon="solar:users-group-two-rounded-bold" width={16} />
                 </div>
                 <div>
-                  <span className="text-[10px] text-slate-400 block">Player Registrations</span>
-                  <a href={`mailto:${emailRegistrations}`} className="font-bold text-slate-200 hover:text-orange-400 transition">
+                  <span className="text-[10px] text-gray-400 block">Player Registrations</span>
+                  <a href={`mailto:${emailRegistrations}`} className="font-bold text-gray-500 hover:text-white transition">
                     {emailRegistrations}
                   </a>
                 </div>
@@ -154,8 +152,8 @@ export function ClubContactMapFrontend({ element }: { element: any }) {
             </div>
 
             {/* Social Links Strip */}
-            <div className="pt-4 border-t border-slate-800 flex items-center gap-3">
-              <span className="text-xs text-slate-400 font-bold mr-1">Follow Tigers:</span>
+            <div className="pt-4 border-t border-main flex items-center gap-3">
+              <span className="text-xs text-gray-400 font-bold mr-1">Follow Tigers:</span>
               {[
                 { icon: "ri:facebook-fill", url: facebookUrl },
                 { icon: "ri:instagram-line", url: instagramUrl },
@@ -167,7 +165,7 @@ export function ClubContactMapFrontend({ element }: { element: any }) {
                   href={s.url}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-8 h-8 rounded-lg bg-slate-800 hover:bg-orange-500 text-white flex items-center justify-center transition"
+                  className="w-8 h-8 rounded-lg bg-main hover:bg-orange-500 text-white flex items-center justify-center transition"
                 >
                   <Icon icon={s.icon} width={15} />
                 </a>
@@ -190,10 +188,10 @@ export function ClubContactMapFrontend({ element }: { element: any }) {
         {/* Right Side: Interactive Inquiry Form & Map */}
         <div className="lg:col-span-7 space-y-6">
           {/* Contact Inquiry Form Card */}
-          <div className="p-8 rounded-3xl bg-white border border-slate-200 shadow-xl space-y-6">
+          <div className="p-8 rounded-3xl bg-white border border-gray-200 shadow-xl space-y-6">
             <div>
-              <h3 className="text-xl font-black text-slate-900">Send an Official Message</h3>
-              <p className="text-xs text-slate-500 mt-0.5">
+              <h3 className="text-xl font-black text-gray-900">Send an Official Message</h3>
+              <p className="text-xs text-gray-500 mt-0.5">
                 Fill out the form below and our club administration team will respond within 24 hours.
               </p>
             </div>
@@ -208,46 +206,46 @@ export function ClubContactMapFrontend({ element }: { element: any }) {
               <form onSubmit={handleSubmit} className="space-y-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">Full Name *</label>
+                    <label className="block text-xs font-bold text-gray-700 mb-1">Full Name *</label>
                     <input
                       type="text"
                       required
                       value={formData.fullName}
                       onChange={(e) => setFormData({ ...formData, fullName: e.target.value })}
                       placeholder="e.g. John Smith"
-                      className="w-full text-xs rounded-xl border border-slate-200 px-3.5 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500"
+                      className="w-full text-xs rounded-xl border border-gray-200 px-3.5 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">Email Address *</label>
+                    <label className="block text-xs font-bold text-gray-700 mb-1">Email Address *</label>
                     <input
                       type="email"
                       required
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="e.g. john@example.com"
-                      className="w-full text-xs rounded-xl border border-slate-200 px-3.5 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500"
+                      className="w-full text-xs rounded-xl border border-gray-200 px-3.5 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500"
                     />
                   </div>
                 </div>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">Contact Phone</label>
+                    <label className="block text-xs font-bold text-gray-700 mb-1">Contact Phone</label>
                     <input
                       type="tel"
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="e.g. 0400 000 000"
-                      className="w-full text-xs rounded-xl border border-slate-200 px-3.5 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500"
+                      className="w-full text-xs rounded-xl border border-gray-200 px-3.5 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500"
                     />
                   </div>
                   <div>
-                    <label className="block text-xs font-bold text-slate-700 mb-1">Department</label>
+                    <label className="block text-xs font-bold text-gray-700 mb-1">Department</label>
                     <select
                       value={formData.department}
                       onChange={(e) => setFormData({ ...formData, department: e.target.value })}
-                      className="w-full text-xs rounded-xl border border-slate-200 px-3.5 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 font-medium text-slate-700"
+                      className="w-full text-xs rounded-xl border border-gray-200 px-3.5 py-2.5 bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500 font-medium text-gray-700"
                     >
                       <option value="General Inquiries">General Club Inquiry</option>
                       <option value="Player Registration">Player Registration & Trials</option>
@@ -258,14 +256,14 @@ export function ClubContactMapFrontend({ element }: { element: any }) {
                 </div>
 
                 <div>
-                  <label className="block text-xs font-bold text-slate-700 mb-1">Your Message *</label>
+                  <label className="block text-xs font-bold text-gray-700 mb-1">Your Message *</label>
                   <textarea
                     required
                     rows={4}
                     value={formData.message}
                     onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                     placeholder="Type your question or message here..."
-                    className="w-full text-xs rounded-xl border border-slate-200 p-3.5 bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500"
+                    className="w-full text-xs rounded-xl border border-gray-200 p-3.5 bg-white focus:outline-none focus:ring-2 focus:ring-orange-500/20 focus:border-orange-500"
                   />
                 </div>
 
@@ -281,21 +279,24 @@ export function ClubContactMapFrontend({ element }: { element: any }) {
           </div>
 
           {/* Interactive Map Embed */}
-          {mapEmbedUrl && (
-            <div className="rounded-3xl overflow-hidden border border-slate-200 shadow-md h-64 w-full bg-slate-100">
-              <iframe
-                title="Club Location Map"
-                src={mapEmbedUrl}
-                width="100%"
-                height="100%"
-                style={{ border: 0 }}
-                allowFullScreen={false}
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-              />
-            </div>
-          )}
+          
         </div>
+      </div>
+      <div>
+        {mapEmbedUrl && (
+          <div className="rounded overflow-hidden border border-gray-200 shadow-md h-64 w-full bg-gray-100">
+            <iframe
+              title="Club Location Map"
+              src={mapEmbedUrl}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen={false}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+            />
+          </div>
+        )}
       </div>
     </div>
   );

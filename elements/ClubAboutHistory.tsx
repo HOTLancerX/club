@@ -128,7 +128,7 @@ export function ClubAboutHistoryFrontend({ element }: { element: any }) {
   const headingStyles = getTypographyStyles(s.style?.headingTypography || {});
 
   return (
-    <div className="w-full py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
+    <div className="w-full py-16 space-y-16">
       {/* ── 1. Top Narrative & Heritage Header ── */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
         {/* Left Text */}
